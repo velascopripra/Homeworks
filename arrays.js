@@ -1,51 +1,135 @@
 //creo el array a, a partir de este se usarán las diferentes funciones
-let a = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-console.log("Array inicial:", a);
+let miArray = [1, 2, 3, 4, 5];
 
-a.sort((x, y) => x - y);
-console.log("Ordenado de menor a mayor:", a);
+// at()
+console.log("Elemento en índice 2:", miArray.at(2));
 
-a.push(99);
-console.log("Se agregó 99 al final:", a);
+// concat()
+let nuevoArray = miArray.concat([6, 7, 8]);
+console.log("Array después de concat:", nuevoArray);
 
-a.pop();
-console.log("Se eliminó el último elemento:", a);
+// copyWithin()
+miArray.copyWithin(2, 0);
+console.log("Array después de copyWithin:", miArray);
 
-a.reverse();
-console.log("Se invirtió el orden:", a);
+// entries()
+let iterador = miArray.entries();
+console.log("Entries:");
+for (let entrada of iterador) {
+    console.log(entrada);
+}
 
-a.unshift(0);
-console.log("Se agregó 0 al inicio:", a);
+// every()
+console.log("Todos son mayores a 0:", miArray.every(num => num > 0));
 
-a.shift();
-console.log("Se eliminó el primer elemento:", a);
+// fill()
+miArray.fill(9, 1, 3);
+console.log("Array después de fill:", miArray);
 
-a.splice(3, 1, 77);
-console.log("Se reemplazó el elemento en la posición 3 con 77:", a);
+// filter()
+let filtrados = miArray.filter(num => num > 3);
+console.log("Filtrados mayores a 3:", filtrados);
 
-let b = a.map(n => n * 2);
-console.log("Cada elemento multiplicado por 2:", b);
+// find()
+let encontrado = miArray.find(num => num > 2);
+console.log("Primer número mayor a 2:", encontrado);
 
-let c = a.find(n => n > 5);
-console.log("Primer número mayor a 5:", c);
+// findIndex()
+let indiceEncontrado = miArray.findIndex(num => num > 2);
+console.log("Índice del primer número mayor a 2:", indiceEncontrado);
 
-let d = a.some(n => n < 3);
-console.log("¿Algún número es menor que 3?:", d);
+// findLast()
+let ultimoEncontrado = miArray.findLast(num => num > 2);
+console.log("Último número mayor a 2:", ultimoEncontrado);
 
-let e = a.includes(10);
-console.log("¿El número 10 está en el array?:", e);
+// findLastIndex()
+let ultimoIndice = miArray.findLastIndex(num => num > 2);
+console.log("Último índice mayor a 2:", ultimoIndice);
 
-let f = a.filter(n => n % 2 == 0);
-console.log("Números pares en el array:", f);
+// flat()
+let arrayAnidado = [1, [2, 3], [4, 5]];
+console.log("Array aplanado:", arrayAnidado.flat());
 
-let g = a.reduce((t, n) => t + n, 0);
-console.log("Suma de todos los elementos:", g);
+// flatMap()
+console.log("FlatMap con duplicación:", miArray.flatMap(num => [num, num * 2]));
 
-let h = a.slice(2, 5);
-console.log("Parte del array (posiciones 2 a 5):", h);
+// forEach()
+console.log("Usando forEach:");
+miArray.forEach(num => console.log(num));
 
-let i = a.every(n => n > 0);
-console.log("¿Todos los números son mayores que 0?:", i);
+// includes()
+console.log("¿Incluye el número 4?", miArray.includes(4));
+
+// indexOf()
+console.log("Índice del número 3:", miArray.indexOf(3));
+
+// join()
+console.log("Array como string:", miArray.join("-"));
+
+// keys()
+console.log("Keys del array:");
+for (let clave of miArray.keys()) {
+    console.log(clave);
+}
+
+// lastIndexOf()
+console.log("Última aparición del número 3:", miArray.lastIndexOf(3));
+
+// map()
+let mapeado = miArray.map(num => num * 3);
+console.log("Array mapeado por 3:", mapeado);
+
+// pop()
+console.log("Elemento eliminado con pop:", miArray.pop());
+console.log("Array después de pop:", miArray);
+
+// push()
+miArray.push(6);
+console.log("Array después de push:", miArray);
+
+// reduce()
+let suma = miArray.reduce((acc, num) => acc + num, 0);
+console.log("Suma con reduce:", suma);
+
+// reduceRight()
+let sumaDerecha = miArray.reduceRight((acc, num) => acc + num, 0);
+console.log("Suma con reduceRight:", sumaDerecha);
+
+// reverse()
+console.log("Array invertido:", miArray.reverse());
+
+// shift()
+console.log("Elemento eliminado con shift:", miArray.shift());
+console.log("Array después de shift:", miArray);
+
+// slice()
+console.log("Slice de índice 1 a 3:", miArray.slice(1, 3));
+
+// some()
+console.log("¿Algún número mayor a 5?", miArray.some(num => num > 5));
+
+// sort()
+console.log("Array ordenado:", miArray.sort());
+
+// splice()
+miArray.splice(2, 1, 99);
+console.log("Array después de splice:", miArray);
+
+// toLocaleString()
+console.log("Array con toLocaleString:", miArray.toLocaleString());
+
+// toString()
+console.log("Array con toString:", miArray.toString());
+
+// unshift()
+miArray.unshift(0);
+console.log("Array después de unshift:", miArray);
+
+// values()
+console.log("Valores del array:");
+for (let valor of miArray.values()) {
+    console.log(valor);
+}
 
 let j = a.findIndex(n => n == 77);
 console.log("Posición del número 77:", j);
