@@ -1,0 +1,51 @@
+.client-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.cliente-card {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.transacciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+li {
+  background: #fff;
+  padding: 0.5rem;
+  margin-bottom: 0.3rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 250px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+  button {
+    background-color: rgb(14, 107, 50);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    padding: 0.6rem;
+
+  }
+  
