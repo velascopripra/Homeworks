@@ -1,0 +1,45 @@
+/* === Songs.css - Estilo tipo Spotify === */
+.songs-container {
+    max-width: 500px;
+    margin: 3rem auto;
+    background-color: #121212;
+    border-radius: 12px;
+    padding: 2rem;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  
+  .songs-container h1 {
+    color: #1db954;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .songs-container p {
+    font-size: 1.2rem;
+    background-color: #181818;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #333;
+    word-break: break-word;
+  }
+  
+  .songs-container button {
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .songs-container button:hover {
+    background-color: #17a44a;
+  }
+  
