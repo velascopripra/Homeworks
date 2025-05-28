@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+.green-zone-tree {
+  margin-bottom: $spacing-sm;
+  
+  &__node {
+    display: flex;
+    align-items: center;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    background-color: $color-primary-light;
+    color: $color-white;
+    font-weight: 500;
+    width: fit-content;
+  }
+  
+  &__icon {
+    margin-right: $spacing-sm;
+  }
+  
+  &__name {
+    font-size: 0.9rem;
+  }
+  
+  &__children {
+    margin-top: $spacing-xs;
+    margin-left: $spacing-md;
+    padding-left: $spacing-md;
+    border-left: 2px solid $color-primary-light;
+  }
+}

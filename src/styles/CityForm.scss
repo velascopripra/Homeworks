@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+.city-form {
+  @include card;
+  margin-bottom: $spacing-lg;
+  
+  h3 {
+    margin-bottom: $spacing-md;
+    color: $color-primary-dark;
+  }
+  
+  h4 {
+    margin-bottom: $spacing-sm;
+    color: $color-primary;
+    font-size: 1.1rem;
+  }
+  
+  &__add, &__remove, &__connect {
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-md;
+    border-bottom: 1px solid $color-border;
+    
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  
+  button {
+    width: 100%;
+    margin-top: $spacing-sm;
+  }
+  
+  &__add button {
+    @include button($color-primary, $color-white);
+  }
+  
+  &__remove button {
+    @include button($color-error, $color-white);
+  }
+  
+  &__connect button {
+    @include button($color-secondary, $color-white);
+  }
+}

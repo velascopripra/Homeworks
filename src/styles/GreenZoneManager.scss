@@ -1,0 +1,63 @@
+@import './variables.scss';
+
+.green-zone-manager {
+  margin-top: $spacing-lg;
+  
+  h3 {
+    color: $color-primary-dark;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__forms {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__tree {
+    @include card;
+    
+    h4 {
+      margin-bottom: $spacing-md;
+      color: $color-primary;
+    }
+  }
+}
+
+.green-zone-form {
+  background-color: $color-background;
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  
+  h4 {
+    margin-bottom: $spacing-sm;
+    color: $color-primary;
+    font-size: 1.1rem;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: $spacing-sm;
+  }
+  
+  &:nth-child(1) button {
+    @include button($color-primary, $color-white);
+  }
+  
+  &:nth-child(2) button {
+    @include button($color-primary, $color-white);
+  }
+  
+  &:nth-child(3) button {
+    @include button($color-secondary, $color-white);
+  }
+}
+
+.green-zone-tree-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: $spacing-sm;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+}
