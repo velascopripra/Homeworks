@@ -1,0 +1,137 @@
+@import 'variables';
+@import 'mixins';
+@import 'placeholders';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.appContainer {
+  display: flex;
+  height: 100vh;
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $bg-color;
+  
+  @include respond-to('small') {
+    flex-direction: column;
+  }
+}
+
+.graphContainer {
+  flex: 1;
+  padding: $spacing-lg;
+  background-color: $bg-light;
+  
+  .title {
+    @include section-title;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .graphWrapper {
+    @include card;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: $shadow-hover;
+    }
+  }
+}
+
+
+.infoPanel {
+  width: $panel-width;
+  background-color: $bg-color;
+  border-left: 1px solid $border-color;
+  padding: $spacing-lg;
+  overflow-y: auto;
+  
+  @include custom-scrollbar;
+  
+  @include respond-to('small') {
+    width: 100%;
+  }
+  
+  .title {
+    @include section-title;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: $spacing-md;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+
+.cityInfo {
+  @include card;
+  margin-bottom: $spacing-lg;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  .cityName {
+    font-size: $font-size-md;
+    font-weight: 500;
+    margin-bottom: $spacing-md;
+    color: $title-color;
+    
+    &::before {
+      content: '🏙️ ';
+    }
+  }
+  
+  .personList {
+    list-style: none;
+    margin: $spacing-md 0;
+  }
+  
+  .personItem {
+    padding: $spacing-sm 0;
+    border-bottom: 1px solid $border-light;
+    font-size: $font-size-sm;
+    color: $text-secondary;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    &::before {
+      content: '👤 ';
+      margin-right: $spacing-xs;
+    }
+    
+    &:hover {
+      background-color: rgba($primary-color, 0.05);
+    }
+  }
+  
+  .emptyMessage {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    text-align: center;
+    padding: $spacing-md 0;
+    font-style: italic;
+  }
+  
+  .cityStats {
+    margin-top: $spacing-md;
+    padding: $spacing-sm $spacing-md;
+    background-color: $bg-accent;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    color: $text-secondary;
+    text-align: center;
+    
+    
+    display: inline-block;
+    border: 1px solid $border-color;
+  }
+}
